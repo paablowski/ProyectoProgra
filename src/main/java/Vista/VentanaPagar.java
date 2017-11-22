@@ -17,6 +17,7 @@ public class VentanaPagar extends JFrame{
     
     public void inicializarComponentes(){
         setSize(400, 400);
+        panelPagar = new PanelPagar();
         add(panelPagar);
         
     }

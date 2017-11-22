@@ -26,15 +26,17 @@ public class PanelMesaDer extends JPanel{
     }
     
     public void inicializarComponentes(){
-        setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
-        
+        //setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+        setLayout(new GridLayout(2, 1));
+        JPanel botones = new JPanel();
+        botones.setLayout(new GridLayout(2, 1));
         btnAgregar = new JButton("Agregar");
-        add(btnAgregar);
+        botones.add(btnAgregar);
         
         btnCancelar = new JButton("Cancelar");
-        add(btnCancelar);
-        
-        TitledBorder borde = BorderFactory.createTitledBorder( "Total a Pagar" );
+        botones.add(btnCancelar);
+        this.add(botones);
+        TitledBorder borde = BorderFactory.createTitledBorder("Total a Pagar");
         borde.setTitleColor( Color.BLUE );
         
         JPanel totalPagarPanel = new JPanel();
@@ -44,9 +46,9 @@ public class PanelMesaDer extends JPanel{
         totalPagarPanel.setBorder(borde);
         
         
-        int total =0;
-        int propinaSugerida=0;
-        int Total=0;
+        int total = 0;
+        int propinaSugerida = 0;
+        int Total = 0;
         JLabel totaltxt = new JLabel("Total: ");
         JLabel subtotaltxt = new JLabel("Subtotal: ");
         JCheckBox incluirPropina = new JCheckBox("Incluir propina: ",false);

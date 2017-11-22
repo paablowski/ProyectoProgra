@@ -1,6 +1,8 @@
 package Vista;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import javax.swing.JFrame;
 
@@ -21,11 +23,11 @@ public class VentanaMesa extends JFrame{
     
     public void inicializarComponentes(){
         
-        
+        this.setLayout(new GridLayout(1, 2));
         panelIzq = new PanelMesaIzq();
         panelDer = new PanelMesaDer();
-        add(panelIzq, BorderLayout.WEST);
-        add(panelDer,BorderLayout.EAST);
+        add(panelIzq);
+        add(panelDer);
         
         ventanaPagar = new VentanaPagar();
         ventanaAgregar = new VentanaAgregar();

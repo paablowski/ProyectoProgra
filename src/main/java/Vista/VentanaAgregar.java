@@ -2,6 +2,7 @@
 package Vista;
 
 import java.awt.BorderLayout;
+import java.awt.GridLayout;
 import javax.swing.JFrame;
 
 /**
@@ -17,9 +18,15 @@ public class VentanaAgregar extends JFrame{
     
     public void inicializarComponentes(){
         setSize(400, 400);
-        add(new PanelAgregarInventario(), BorderLayout.NORTH);
-        add(new PanelAgregarCentral(),BorderLayout.CENTER);
-        add(new PanelAgregarPedidos(),BorderLayout.SOUTH);
+        setLayout(new GridLayout(3, 1));
+        PanelAgregarInventario panelInventario = new PanelAgregarInventario();
+        add(panelInventario);
+        
+        PanelAgregarCentral panelAgregarCentral = new PanelAgregarCentral();
+        add(panelAgregarCentral);
+        
+        PanelAgregarPedidos panelAgregarPedidos = new PanelAgregarPedidos();
+        add(panelAgregarPedidos);
         
     }
     
